@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      p {
+        font-family: Roboto, Arial;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
       .thumbnail {
-        width: 300px;
-        display: block;
+        width: 100%;
       }
 
       .search-bar {
@@ -15,34 +26,159 @@
       }
 
       .video-title {
-        width: 300px;
+        margin-top: 0;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 12px;
       }
 
-      .video-preview {
-        width: 300px;
-        display: inline-block;
-        vertical-align: top;
-        margin-right: 15px;
+      .video-info-grid {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+      }
+
+      .profile-picture {
+        width: 40px;
+        border-radius: 50px;
+      }
+
+      .thumbnail-row {
+        margin-bottom: 12px;
+      }
+
+      .video-author,
+      .video-stats {
+        font-size: 12px;
+        color: rgb(96, 96, 96);
+      }
+
+      .video-author {
+        margin-bottom: 4px;
+      }
+
+      .video-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 16px;
+        row-gap: 40px;
       }
     </style>
   </head>
   <body>
     <input class="search-bar" type="text" placeholder="Search" />
 
-    <div class="video-preview">
-      <img class="thumbnail" src="thumbnails/khontkar.jpg" />
+    <div class="video-grid">
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/hill.jpg" />
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="channel-pictures/hillpfp.jpg" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Positive Mental Attitude (1963) live lecture by Napoleon Hill
+            </p>
+            <p class="video-author">Master Key Society</p>
+            <p class="video-stats">1.1M views &#183; 5 years ago</p>
+          </div>
+        </div>
+      </div>
 
-      <p class="video-title">Khontkar - WHO IS YOU (Music Video)</p>
-      <p class="video-author">Khontkar</p>
-      <p class="video-stats">777K views &#183; 2 years ago</p>
-    </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/jung.jpg" />
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="channel-pictures/jungpfp.jpg" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">The Psychology of Knowing Yourself</p>
+            <p class="video-author">Eternalised</p>
+            <p class="video-stats">36K views &#183; 1 day ago</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="video-preview">
-      <img class="thumbnail" src="thumbnails/jung.jpg" />
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/ahiyan.jpg" />
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="channel-pictures/ahiyanpfp.jpg" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              AHİYAN 'BENİM HEDEF KİTLEM YOK' - Emre Yücelen ile #CanlıCanlı
+            </p>
+            <p class="video-author">Emre Yücelen Şan Dersi</p>
+            <p class="video-stats">234K views &#183; 4 years ago</p>
+          </div>
+        </div>
+      </div>
 
-      <p class="video-title">The Psychology of Knowing Yourself</p>
-      <p class="video-author">Eternalised</p>
-      <p class="video-stats">35K views &#183; 1 day ago</p>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/khontkar.jpg" />
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img
+              class="profile-picture"
+              src="channel-pictures/khontkarpfp.jpg"
+            />
+          </div>
+          <div class="video-info">
+            <p class="video-title">Khontkar - WHO IS YOU (Music Video)</p>
+            <p class="video-author">RedKeys Music</p>
+            <p class="video-stats">777K views &#183; 2 years ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/son.jpg" />
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="channel-pictures/sonpfp.jpg" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Baran Mengüç, Aerro - Son (Official Video)
+            </p>
+            <p class="video-author">Baran Mengüç</p>
+            <p class="video-stats">107K views &#183; 6 months ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/gurdjieff.jpg" />
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img
+              class="profile-picture"
+              src="channel-pictures/gurdjieffpfp.jpg"
+            />
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              1 Hour of Gurdjieff's Music Compilation - arr. for violin &
+              strings
+            </p>
+            <p class="video-author">Violin Soundscapes</p>
+            <p class="video-stats">352K views &#183; 2 months ago</p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
